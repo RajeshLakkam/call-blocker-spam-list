@@ -1,0 +1,20 @@
+[
+  {
+    "number": "+911400000001",
+    "name": "Loan offer robocall",
+    "details": "Automated call offering a pre-approved personal loan. Hangs up if you answer and say nothing. Example entry — replace with real reports.",
+    "category": "TELEMARKETING"
+  },
+  {
+    "number": "+911400000002",
+    "name": "Credit card upgrade",
+    "details": "Recorded pitch to upgrade a card you do not hold, then transfers to an agent asking for your date of birth. Example entry — replace with real reports.",
+    "category": "PROMOTIONAL"
+  },
+  {
+    "number": "+918000000001",
+    "name": "Fake KYC update",
+    "details": "Claims your bank account will be frozen unless you complete KYC, and asks you to install a screen-sharing app. Example entry — replace with real reports.",
+    "category": "FRAUD"
+  }
+]
