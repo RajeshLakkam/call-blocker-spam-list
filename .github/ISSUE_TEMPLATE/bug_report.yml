@@ -1,0 +1,77 @@
+name: Bug report
+description: A call was blocked that shouldn't have been, a call got through that shouldn't have, or something else went wrong.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please mask phone numbers** — write `+91 140xxxxxxx`, not the real digits. Never post
+        someone else's number.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      placeholder: A call from an unknown number rang normally even though whitelist-only mode was on.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Lists → Allowed, added one number
+        2. Turned on "Only allow these numbers"
+        3. Called the phone from a different number
+        4. It rang
+    validations:
+      required: true
+
+  - type: input
+    id: history-reason
+    attributes:
+      label: What History shows as the reason
+      description: Open the History tab, find the call, and copy the reason line.
+      placeholder: Whitelist-only mode is on
+
+  - type: dropdown
+    id: role-held
+    attributes:
+      label: Does the app hold the caller ID & spam role?
+      description: The top card on the Protection tab says.
+      options:
+        - "Yes — it says Protected"
+        - "No — it says Not protected"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version and phone model
+      placeholder: Android 14, Samsung Galaxy S23
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Settings → About, or the versionName you built.
+      placeholder: 0.1.0
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logcat, if you have it
+      description: "`adb logcat -s CallBlocker` around the time of the call. Mask any numbers."
+      render: text

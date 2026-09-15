@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security issue
+    url: https://github.com/RajeshLakkam/call-blocker/blob/main/CONTRIBUTING.md#security
+    about: Please report security problems privately by email, not as a public issue.
+  - name: How do I use the app?
+    url: https://github.com/RajeshLakkam/call-blocker/blob/main/how%20to%20use/HOW_TO_USE.md
+    about: Setup, whitelist-only mode and every setting are documented here.

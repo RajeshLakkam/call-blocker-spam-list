@@ -1,0 +1,66 @@
+name: Report a spam number
+description: Suggest a number for the shared spam list, if you would rather not open a pull request yourself.
+labels: [spam-list]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adding the number yourself is faster — edit
+        [spamlist.json](https://github.com/RajeshLakkam/call-blocker-spam-list/edit/HEAD/spamlist.json)
+        in the GitHub web editor and open a pull request. Use this form if you would rather not.
+
+        **Only report numbers that call strangers in bulk**: call centres, robocallers, scam lines.
+        Never report a number belonging to a real person you know. Every entry silences that number
+        on thousands of phones, and this list is not a way to deal with someone you are in a dispute
+        with — such reports are closed without action.
+
+  - type: input
+    id: number
+    attributes:
+      label: The number
+      description: International form, no spaces — the full number as it should appear on the list.
+      placeholder: "+911400000001"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: What the caller claims to be. This is what people will see on their screen. Max 80 characters.
+      placeholder: Loan offer robocall
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens on the call
+      description: Enough for a stranger to recognise it. Max 280 characters.
+      placeholder: Recorded pitch for a pre-approved personal loan, then transfers to an agent asking for your date of birth.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - TELEMARKETING
+        - PROMOTIONAL
+        - FRAUD
+        - SURVEY
+        - DEBT_COLLECTION
+        - OTHER
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Please confirm
+      options:
+        - label: This number called me, or I have seen it reported elsewhere — I am not guessing.
+          required: true
+        - label: It is not a personal number belonging to someone I know.
+          required: true
