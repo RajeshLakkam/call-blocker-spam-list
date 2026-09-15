@@ -16,5 +16,11 @@
     "name": "Fake KYC update",
     "details": "Claims your bank account will be frozen unless you complete KYC, and asks you to install a screen-sharing app. Example entry — replace with real reports.",
     "category": "FRAUD"
+  },
+  {
+    "number": "+918037284142",
+    "name": "HDFC ROBO CALL",
+    "details": "calls 5 times if not picked up",
+    "category": "BANKING"
   }
 ]
